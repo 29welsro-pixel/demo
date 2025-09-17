@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
+    </head>
+    <body>
+        <a-scene>
+            
+            
+            <!-- Set up camera and cursor -->
+            <a-camera>
+                <a-cursor fuse="true" fuse-timeout="3000"></a-cursor>
+            </a-camera>
+            
+            
+            <!-- Bowl -->
+            <a-cone color="white" radius-bottom="2"
+                radius-top="6" position="0 2.5 -15"
+                height="5">
+            </a-cone>
+            
+            <!-- Water -->
+            <a-cone color="dodgerblue" radius-bottom="1"
+                radius-top="4" position="0 2.5 -13" height="2"
+                animation="
+                    property: height;
+                    from: 2;
+                    to: 4;
+                    startEvents: click;"></a-cone>
+            
+              <!-- Set the Sky -->
+            <a-sky color="mediumseagreen"></a-sky>
+            
+            <!-- Set the camera and cursor -->
+            <a-camera>
+                <a-cursor fuse="true" fuse-timeout="5000"></a-cursor>
+            </a-camera>
+            
+            
+            <!-- Ground -->
+            <a-plane position="0 0 0" rotation="-90 0 0"
+                color="sienna" height="100" width="100">
+            </a-plane>
+            
+            <!-- Torus -->
+            <a-torus-knot arc="360" radius-tubular="0.1"
+                radius="1" color="goldenrod"
+                position="16 1 -10"
+                animation__1= "
+                    property: position;
+                    dir: alternate;
+                    from: 16 1 -10;
+                    to: -20 1 -5;
+                    loop: true;
+                    startEvents: click;"
+                    
+                     animation__2= "
+                    property: rotation;
+                    from: 0 0 0;
+                    to: 0 0 360;
+                    loop: true;
+                    starEvents: click;
+                ">
+                    
+                    ></a-torus-knot>
+            
+        </a-scene>
+    </body>
+</html>
