@@ -12,7 +12,6 @@
                 <a-cursor fuse="true" fuse-timeout="3000"></a-cursor>
             </a-camera>
             
-            
             <!-- Bowl -->
             <a-cone color="white" radius-bottom="2"
                 radius-top="6" position="0 2.5 -15"
@@ -26,6 +25,12 @@
                     property: height;
                     from: 2;
                     to: 4;
+                    startEvents: click;"
+            
+                animation__2="
+                    property: color;
+                    from: #1E90FF;
+                    to: #0000FF;
                     startEvents: click;"></a-cone>
             
               <!-- Set the Sky -->
